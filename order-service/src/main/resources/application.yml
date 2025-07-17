@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:5432/orderdb
+    username: mysql
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
